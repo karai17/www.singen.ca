@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="static/css/style.css" />
+<script src="static/js/clipboard.min.js"></script>
+<script src="static/js/script.js"></script>
+<title><%= page_title %></title>
+<article>
+	<% content_for("inner") %>
+</article>
+<footer>
+	Copyright &copy; 2017 <a href="http://landonmanning.com">Landon Manning</a><br>
+	This website is a tool to assist in testing software that requires a valid SIN, such as financial software.<br>
+	Please do not use this website for a nefarious purpose, you could go to jail!
+</footer>

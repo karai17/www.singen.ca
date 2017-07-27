@@ -1,0 +1,9 @@
+<section>
+	<h1>Canadian Social Insurance Numbers</h1>
+	<ul>
+		<% for i=1, #sins do %>
+		<li id="sin<%= i %>" class="copy" data-clipboard-target="#sin<%= i %>"><%= sins[i] %></li>
+		<% end %>
+	</ul>
+	<span id="reload" onclick="location.reload()">🔄</span>
+</section>
