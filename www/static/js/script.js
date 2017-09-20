@@ -11,6 +11,15 @@ function disable_button() {
 	}
 }
 
+function toggle_info() {
+	let info = document.getElementById("info-panel");
+	if (info.style.display === "none") {
+		info.style.display = "block";
+	} else {
+		info.style.display = "none";
+	}
+}
+
 // Run scripts when window is loaded
 window.onload = function() {
 	new Clipboard(".copy");

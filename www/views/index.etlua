@@ -5,5 +5,12 @@
 		<li id="sin<%= i %>" class="copy" data-clipboard-target="#sin<%= i %>"><%= sins[i] %></li>
 		<% end %>
 	</ul>
+	<span id="info" onclick="toggle_info()">ℹ️</span>
 	<span id="reload" onclick="location.reload()">🔄</span>
+	<div id="info-panel" style="display: none;">
+		This website is a tool designed to assist in testing software that
+		requires a valid SIN such as financial software. Attempting to use these
+		fake SINs for fraudulent purposes is very, very illegal. If you try to do
+		anything nefarious, you could go to jail! For realsies!
+	</div>
 </section>

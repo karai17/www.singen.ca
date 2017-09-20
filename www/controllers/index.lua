@@ -56,7 +56,7 @@ return function(self)
 	self.page_title = config.site_name
 	self.sins       = {}
 
-	for _=1, 75 do
+	for _=1, 102 do
 		table.insert(self.sins, generate_sin())
 	end
 

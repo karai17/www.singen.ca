@@ -9,7 +9,5 @@
 	<% content_for("inner") %>
 </article>
 <footer>
-	Copyright &copy; 2017 <a href="http://landonmanning.com">Landon Manning</a><br>
-	This website is a tool to assist in testing software that requires a valid SIN, such as financial software.<br>
-	Please do not use this website for a nefarious purpose, you could go to jail!
+	Copyright &copy; 2017 <a href="http://landonmanning.com">Landon Manning</a> | Powered by <a href="http://citadeldesign.ca">Citadel Design</a>
 </footer>

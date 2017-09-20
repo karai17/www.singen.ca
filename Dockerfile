@@ -1,12 +1,11 @@
 FROM karai17/lapis-centos:latest
 
-MAINTAINER Landon Manning <lmanning17@gmail.com>
+MAINTAINER Landon Manning <lmanning@citadeldesign.ca>
 
-WORKDIR /www
-
-COPY www /www
+VOLUME /var/www
+WORKDIR /var/www
 
 EXPOSE 2808
 
 ENTRYPOINT ["/usr/bin/lapis"]
-CMD ["server", "prod"]
+CMD ["server", "devel"]
