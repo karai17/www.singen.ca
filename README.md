@@ -27,6 +27,5 @@ docker run \
 	-v "/var/www/singen.ca/data:/var/data" \
 	-v "/var/www/singen.ca/www:/var/www" \
 	--name singen.ca \
-	karai17/lapis-centos:latest \
-	server prod
+	karai17/lapis-centos:latest server prod
 ```
