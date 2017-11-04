@@ -47,12 +47,12 @@ docker run \
 ### Staging
 
 ```
-sudo certbot certonly --standalone --email lmanning@citadeldesign.ca --agree_tos -d devel.singen.ca
+sudo certbot certonly --standalone --email lmanning@citadeldesign.ca --agree-tos -d devel.singen.ca
 ```
 
 ### Production
 
 ```
-sudo certbot certonly --standalone --email lmanning@citadeldesign.ca --agree_tos -d singen.ca -d www.singen.ca
+sudo certbot certonly --standalone --email lmanning@citadeldesign.ca --agree-tos -d singen.ca -d www.singen.ca
 ```
 
