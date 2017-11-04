@@ -11,17 +11,23 @@ function disable_button() {
 	}
 }
 
-function toggle_info() {
-	let info = document.getElementById("info-panel");
-	if (info.style.display === "none") {
-		info.style.display = "block";
-	} else {
-		info.style.display = "none";
-	}
-}
-
 // Run scripts when window is loaded
 window.onload = function() {
 	new Clipboard(".copy");
 	disable_button();
+
+	// Toggle info panel
+	document.getElementById("info").addEventListener("click", function() {
+		let info = document.getElementById("info-panel");
+		if (info.className == "hide") {
+			info.className = "";
+		} else {
+			info.className = "hide";
+		}
+	});
+
+	// Reload site
+	document.getElementById("reload").addEventListener("click", function() {
+		location.reload()
+	});
 }

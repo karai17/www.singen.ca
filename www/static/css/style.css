@@ -80,6 +80,7 @@ a {
 #info-panel {
 	background-color: #ffffff;
 	box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+	display: block;
 	padding: 10mm;
 	position: absolute;
 	left: 5mm;
@@ -105,4 +106,8 @@ a {
 
 .copied:hover {
 	background-color: #f7f7f7;
+}
+
+.hide {
+	display: none !important;
 }
