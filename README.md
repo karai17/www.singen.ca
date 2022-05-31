@@ -8,52 +8,18 @@ docker pull karai17/lapis-centos:latest
 
 ## Create Docker Container
 
-### Development
-
 ```
-docker run \
--dti \
--p 8888:2808 \
--v "/home/karai/CitadelDesign/singen.ca/data:/var/data" \
--v "/home/karai/CitadelDesign/singen.ca/www:/var/www" \
---name singen.ca \
-karai17/lapis-centos:latest
+./dev.sh
 ```
 
-### Staging
-
 ```
-docker run \
--dti \
--p 10200:2808 \
--v "/var/www/singen.ca/data:/var/data" \
--v "/var/www/singen.ca/www:/var/www" \
---name singen.ca \
-karai17/lapis-centos:latest
-```
-
-### Production
-
-```
-docker run \
--dti \
--p 10200:2808 \
--v "/var/www/singen.ca/data:/var/data" \
--v "/var/www/singen.ca/www:/var/www" \
---name singen.ca \
-karai17/lapis-centos:latest server prod
+./prod.sh
 ```
 
 ## SSL Certificates
 
-### Staging
-
-```
-sudo certbot certonly --standalone --email lmanning@citadeldesign.ca --agree-tos -d devel.singen.ca
-```
-
 ### Production
 
 ```
-sudo certbot certonly --standalone --email lmanning@citadeldesign.ca --agree-tos -d singen.ca -d www.singen.ca
+sudo certbot certonly --standalone --email lmanning17@gmail.com --agree-tos -d singen.ca -d www.singen.ca
 ```
