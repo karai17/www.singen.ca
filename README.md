@@ -15,11 +15,3 @@ docker pull karai17/lapis-centos:latest
 ```
 ./prod.sh
 ```
-
-## SSL Certificates
-
-### Production
-
-```
-sudo certbot certonly --nginx --email lmanning17@gmail.com --agree-tos -d singen.ca -d www.singen.ca
-```
