@@ -21,5 +21,5 @@ docker pull karai17/lapis-centos:latest
 ### Production
 
 ```
-sudo certbot certonly --standalone --email lmanning17@gmail.com --agree-tos -d singen.ca -d www.singen.ca
+sudo certbot certonly --nginx --email lmanning17@gmail.com --agree-tos -d singen.ca -d www.singen.ca
 ```

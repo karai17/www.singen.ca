@@ -10,7 +10,10 @@ services:
     volumes:
       - ./www:/var/www
       - ./data:/var/data
-    ports:
-      - 10200:80
     restart: always
     command: bash -c "/usr/local/bin/docker-entrypoint.sh"
+
+networks:
+  default:
+    name: npm-net
+    external: true
