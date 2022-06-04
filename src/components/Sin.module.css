@@ -1,0 +1,46 @@
+.sin {
+	font-size: 2em;
+}
+
+.used {
+	color: var(--color-highlight);
+	text-decoration: line-through;
+}
+
+.copy {
+	font-size: 1em;
+	text-shadow: var(--text-shadow);
+	opacity: 0;
+	position: absolute;
+	top: -20px;
+	right: 10px;
+}
+
+.copy-enter {
+	opacity: 0;
+}
+
+.copy-enter-active {
+	opacity: 1;
+	transition: all 300ms;
+}
+
+.copy-enter-done {
+	opacity: 1;
+}
+
+.copy-exit {
+	opacity: 1;
+	top: -20px;
+}
+
+.copy-exit-active {
+	opacity: 0;
+	top: -25px;
+	transition: all 300ms;
+}
+
+.copy-exit-done {
+	opacity: 0;
+	top: -25px;
+}

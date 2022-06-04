@@ -1,0 +1,23 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-primary);
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.h1 {
+	color: var(--color-secondary);
+	font-size: 2em;
+	font-weight: var(--text-bold);
+	text-align: center;
+	margin: var(--spacing-small);
+}
+
+@media only screen and (min-width: 1024px) {
+	.h1 {
+		font-size: 3em;
+		margin: var(--spacing-large);
+	}
+}

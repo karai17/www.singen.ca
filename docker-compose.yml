@@ -3,16 +3,16 @@ version: '2.4'
 services:
 
   www-singen-ca:
-    environment:
-      LAPIS_ENV: ${LAPIS_ENV}
     mem_limit: 50mb
     memswap_limit: 50mb
-    image: karai17/lapis-centos:latest
+    image: nginx:alpine
     volumes:
-      - ./www:/var/www
-      - ./data:/var/data
+      - ./build:/usr/share/nginx/html
     restart: always
-    command: bash -c "/usr/local/bin/docker-entrypoint.sh"
+
+    # Development
+    # ports:
+    #   - 8080:80
 
 networks:
   default:

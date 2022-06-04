@@ -1,9 +1,9 @@
-# SIN Generator
+# Canadian SIN Generator
 
 ## Build Docker Image
 
 ```
-docker pull karai17/lapis-centos:latest
+docker pull nginx:alpine
 ```
 
 ## Create Docker Container

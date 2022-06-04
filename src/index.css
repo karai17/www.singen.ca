@@ -1,0 +1,25 @@
+:root {
+	--color-primary: #cb2b23;
+	--color-secondary: #fefefe;
+	--color-tertiary: #1b1b1b;
+	--color-highlight: #ffdddd;
+	--color-background: #141414;
+
+	--spacing-xsmall: 10px;
+	--spacing-small: 20px;
+	--spacing-medium: 30px;
+	--spacing-large: 40px;
+
+	--shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	--shadow-highlight: 0 5px 7px rgba(0, 0, 0, 0.15);
+
+	--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--text-bold: 700;
+	--text-shadow: 0 2px 4px rgba(240, 0, 0,0.25);
+}
+
+body {
+	background-color: var(--color-background);
+	font-family: var(--font-family);
+}
+
