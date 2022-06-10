@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRotateRight } from "@fortawesome/free-solid-svg-icons";
 
-import Sin from "../Sin";
+import RefreshButton from "../UI/RefreshButton";
+import SinList from "../Sin/SinList";
+
 import styles from "./MainBody.module.css";
 
-function randomInt(max) {
+function randomInt(max: number): number {
 	return Math.floor(Math.random() * max);
 }
 
@@ -20,7 +20,7 @@ function randomInt(max) {
 	For full license details, please visit:
 	http://www.fakenamegenerator.com/license.php
 */
-function generateSin() {
+function generateSin(): string {
 	const validPrefix = [ "1", "2", "3", "4", "5", "6", "7", "9" ];
 	const sin = [validPrefix[randomInt(8)]];
 	const length = 9;
@@ -55,28 +55,26 @@ function generateSin() {
 	return sin.join("");
 }
 
-function MainBody() {
-	const [sinList, setSinList] = useState([]);
-	const sinCards = sinList.map((sin) => <li key={sin}><Sin>{sin}</Sin></li>);
+const MainBody: React.FC = () => {
+	const [sins, setSins] = useState<string[]>([]);
 
-	function generateSins() {
-		const sins = [];
+	function refreshSins() {
+		const newSins: string[] = [];
 
 		for (let i=0; i<40; i++) {
-			const sin = generateSin();
-			sins.push(sin);
+			newSins.push(generateSin());
 		}
 
-		setSinList(sins);
+		setSins(newSins);
 	}
 
-	useEffect(generateSins, []);
+	useEffect(refreshSins, []);
 
 	return (
-		<main className={styles.container}>
-			<article className={styles.content}>
+		<main className={styles["main-body"]}>
+			<article>
 				<section className={styles.disclaimer}>
-					<h2 className={styles.h2}>Disclaimer</h2>
+					<h2>Disclaimer</h2>
 					<p>
 						This tool is designed to assist with testing government and financial software that requires valid Canadian
 						Social Insurance Numbers. Using fake Canadian Social Insurance Numbers for any other purpose may constitute
@@ -84,12 +82,12 @@ function MainBody() {
 					</p>
 				</section>
 				<section className={styles.sins}>
-					<FontAwesomeIcon icon={faArrowRotateRight} className={styles.fa} onClick={generateSins} />
-					<ul className={styles.sinList}>{sinCards}</ul>
+					<RefreshButton onClick={refreshSins} />
+					<SinList sins={sins} />
 				</section>
 			</article>
 		</main>
 	);
-}
+};
 
 export default MainBody;

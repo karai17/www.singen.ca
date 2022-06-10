@@ -1,13 +1,10 @@
 :root {
 	--color-primary: #cb2b23;
 	--color-secondary: #fefefe;
-	--color-tertiary: #1b1b1b;
 	--color-highlight: #ffdddd;
-	--color-background: #141414;
 
 	--spacing-xsmall: 10px;
 	--spacing-small: 20px;
-	--spacing-medium: 30px;
 	--spacing-large: 40px;
 
 	--shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -19,10 +16,5 @@
 }
 
 body {
-	background-color: var(--color-background);
 	font-family: var(--font-family);
-}
-
-noscript {
-	color: var(--color-secondary);
 }

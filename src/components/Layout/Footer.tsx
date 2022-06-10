@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-function Footer() {
+const Footer: React.FC = () => {
 	return (
 		<footer className={styles.footer}>
 			<ul>
@@ -9,6 +9,6 @@ function Footer() {
 			</ul>
 		</footer>
 	);
-}
+};
 
 export default Footer;

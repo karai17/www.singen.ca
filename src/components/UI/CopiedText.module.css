@@ -1,14 +1,6 @@
-.sin {
-	font-size: 2em;
-}
-
-.used {
-	color: var(--color-highlight);
-	text-decoration: line-through;
-}
-
 .copy {
-	font-size: 1em;
+	color: var(--color-primary);
+	font-size: 0.5em;
 	text-shadow: var(--text-shadow);
 	opacity: 0;
 	position: absolute;

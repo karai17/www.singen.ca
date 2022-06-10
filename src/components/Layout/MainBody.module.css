@@ -1,10 +1,10 @@
-.container {
+.main-body {
 	background-color: var(--color-secondary);
 	color: var(--color-primary);
 	width: 100%;
 }
 
-.content {
+.main-body article {
 	margin: 0 auto;
 	padding: var(--spacing-small);
 	width: 100%;
@@ -15,6 +15,13 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: var(--spacing-small);
+}
+
+.disclaimer h2 {
+	font-size: 1.5em;
+	font-weight: var(--text-bold);
+	text-decoration: underline;
 	margin-bottom: var(--spacing-small);
 }
 
@@ -29,13 +36,6 @@
 	margin-bottom: 0;
 }
 
-.h2 {
-	font-size: 1.5em;
-	font-weight: var(--text-bold);
-	text-decoration: underline;
-	margin-bottom: var(--spacing-small);
-}
-
 .sins {
 	display: flex;
 	flex-direction: column;
@@ -43,35 +43,16 @@
 	justify-content: center;
 }
 
-.fa {
-	cursor: pointer;
-	font-size: 3em;
-	margin-bottom: var(--spacing-small);
-}
-
-.sinList {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	gap: var(--spacing-small);
-	align-items: center;
-	justify-content: center;
-}
-
 @media only screen and (min-width: 1024px) {
-	.content {
+	.main-body article {
 		max-width: 1200px;
+	}
+
+	.disclaimer h2 {
+		font-size: 2em;
 	}
 
 	.disclaimer p {
 		font-size: 1.35em;
-	}
-
-	.h2 {
-		font-size: 2em;
-	}
-
-	.sinList {
-		flex-direction: row;
 	}
 }

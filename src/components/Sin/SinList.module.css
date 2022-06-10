@@ -1,0 +1,14 @@
+.sinList {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: var(--spacing-small);
+	align-items: center;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+	.sinList {
+		flex-direction: row;
+	}
+}
